@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "start": "webpack-dev-server --content-base build"
+    "//": "Visit http://localhost:8081/ for live reload.",
+    "start": "webpack-dev-server --content-base build --port 8081"
   },
   "keywords": [],
   "author": "",
