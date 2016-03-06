@@ -31,7 +31,7 @@ body {
 
 .note .task {
   /* force to use inline-block so that it gets minimum height */
-  display: inline-block;
+  margin-right: 10px;
 }
 
 .note .delete-note {
