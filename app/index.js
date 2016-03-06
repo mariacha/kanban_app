@@ -3,6 +3,7 @@
  *
  * index.js file for creating the app div.
  */
+require('./main.css');
 var component = require('./component');
 var app = document.createElement('div');
 
