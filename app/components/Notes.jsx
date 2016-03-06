@@ -1,13 +1,13 @@
 import React from 'react';
 import Note from './Note.jsx';
 
-export default ({notes, onEdit}) => {
+export default ({notes, onCake}) => {
   return (
     <ul>{notes.map(note =>
         <li key={note.id}>
           <Note
             task={note.task}
-            onEdit={onEdit.bind(null, note.id)} />
+            onCake={onCake.bind(null, note.id)} />
         </li>
     )}</ul>
   );

@@ -38,9 +38,9 @@ export default class Note extends React.Component {
   };
   renderNote = () => {
     // If the user clicks a normal note, trigger editing logic.
-    return <div onClick={this.edit}>{this.props.task}</div>;
+    return <div onClick={this.fudge}>{this.props.task}</div>;
   };
-  edit = () => {
+  fudge = () => {
     // Enter edit mode.
     this.setState({
       editing: true
@@ -63,8 +63,8 @@ export default class Note extends React.Component {
     // See the *Typing with React* chapter for more information.
     const value = e.target.value;
 
-    if(this.props.onEdit) {
-      this.props.onEdit(value);
+    if(this.props.onCake) {
+      this.props.onCake(value);
 
       // Exit edit mode.
       this.setState({
