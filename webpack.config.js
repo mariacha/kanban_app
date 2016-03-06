@@ -18,6 +18,18 @@ const common = {
   output: {
     path: PATHS.build,
     filename: 'bundle.js'
+  },
+  module: {
+    loaders: [
+      {
+        // We're going to look for all .css files within the app folder and
+        // run the loaders from right to left -- css, then style -- to pull
+        // in css through @imports (css) first, then requires (js).
+        test: /\.css$/,
+        loaders: ['style', 'css'],
+        include: PATHS.app
+      }
+    ]
   }
 };
 
