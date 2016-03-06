@@ -65,6 +65,7 @@ export default class App extends React.Component {
   editNote = (id, task) => {
     // Don't modify if trying set an empty value
     if(!task.trim()) {
+      this.deleteNoteFromArray(id);
       return;
     }
 
@@ -83,6 +84,11 @@ export default class App extends React.Component {
     // Avoid bubbling to edit
     e.stopPropagation();
 
+    this.deleteNoteFromArray(id);
+  };
+
+  // Helper function I made so that clearing out a note also deletes it.
+  deleteNoteFromArray = (id) => {
     this.setState({
       notes: this.state.notes.filter(note => note.id !== id)
     });
