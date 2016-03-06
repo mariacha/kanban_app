@@ -29,9 +29,8 @@ export default class Lane extends React.Component {
     );
   }
   editNote(id, task) {
-    // Don't modify if trying set an empty value
     if(!task.trim()) {
-      return;
+      NoteActions.delete(id);
     }
 
     NoteActions.update({id, task});
